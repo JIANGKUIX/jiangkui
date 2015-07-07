@@ -9,22 +9,25 @@ public class zhishu
 	public static void main(String[] args)
 	{
 		// TODO Auto-generated method stub
-      int i,j,a=0;
-      for(i=2;i<=100;i++)
+      boolean b=true;
+      int a=0;
+      for(int i=2;i<=100;i++)
       {
-    	  for(j=2;j<i;j++)
+    	  for(int j=2;j<i;j++)
     	  {
     		  if (i%j==0)
     			{
-    			  a++;
+    			 b=false;
+    			 a++;
     		      break;
     		    }
+    		  b=true;
+    		  
     	  }
+    	  if(b==true)
+    		 System.out.println(i);
       }
-    
-      System.out.println("" +(100-a));
-      System.out.println(a+"\t");
-      
+      System.out.println("ºÏÊý£º"+a);
 	}
 
 }
